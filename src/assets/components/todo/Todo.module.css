@@ -25,11 +25,13 @@
   gap: 0.5rem;
 }
 
+.btn {
+  cursor: pointer;
+}
+
 .icons_todo {
   font-size: 1.7rem;
-  cursor: pointer;
   color: #eb2d86;
-  transition: 0.7s;
 }
 
 .date {
