@@ -1,0 +1,39 @@
+.todo {
+  padding: 1rem 0.5rem;
+  margin-bottom: 1.2rem;
+  background-color: #373b42;
+  /* background-color: #323841; */
+  box-shadow: 1px 1px 1px rgb(35, 35, 35);
+  transition: 0.7s;
+  cursor: grabbing;
+}
+.todo:hover {
+  box-shadow: 5px 5px 20px rgb(35, 35, 35);
+}
+
+.container {
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  font-size: 1.1rem;
+}
+.control_actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icons_todo {
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: #eb2d86;
+  transition: 0.7s;
+}
+
+.date {
+  font-size: 0.7rem;
+  font-weight: none;
+  color: #eb2d86;
+}

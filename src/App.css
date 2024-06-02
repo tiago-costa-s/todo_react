@@ -1,0 +1,18 @@
+.app {
+  margin: 5rem auto;
+  width: 600px;
+  height: 200px;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.container_app {
+  background-color: #39404A;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px;
+}

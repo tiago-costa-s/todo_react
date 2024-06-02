@@ -1,0 +1,21 @@
+.form_todo {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.form_todo div {
+  display: flex;
+  width: 100%;
+}
+
+.form_todo input {
+  width: 100%;
+}
+
+.container {
+    display: flex;
+    gap: .5rem;
+}
+.created {
+  background-color: #eb2d86;
+}
