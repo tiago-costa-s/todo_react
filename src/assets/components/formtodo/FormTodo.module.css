@@ -16,6 +16,7 @@
     display: flex;
     gap: .5rem;
 }
-.created {
+.btn_created {
+  padding: 16px;
   background-color: #eb2d86;
 }
