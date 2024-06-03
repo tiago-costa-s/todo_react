@@ -7,8 +7,22 @@
   transition: 0.7s;
   cursor: grabbing;
 }
+
 .todo:hover {
   box-shadow: 5px 5px 20px rgb(35, 35, 35);
+}
+
+.completed {
+  padding: 1rem 0.5rem;
+  margin-bottom: 1.2rem;
+  background-color: #373b42;
+  background-color: #3e4651;
+  cursor: grabbing;
+}
+
+.completed, .title .date {
+  opacity: .6;
+  text-decoration: line-through;
 }
 
 .container {
@@ -18,6 +32,7 @@
 }
 .title {
   font-size: 1.1rem;
+  font-weight: 500;
 }
 .control_actions {
   display: flex;
@@ -25,17 +40,18 @@
   gap: 0.5rem;
 }
 
-.btn {
-  cursor: pointer;
-}
-
 .icons_todo {
   font-size: 1.7rem;
   color: #eb2d86;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+.icons_todo:hover {
+  opacity: 1;
 }
 
 .date {
-  font-size: 0.7rem;
-  font-weight: none;
+  font-size: 0.8rem;
+  font-weight: 400;
   color: #eb2d86;
 }

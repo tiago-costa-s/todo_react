@@ -1,16 +1,14 @@
-// components
-
-// styles
+// hook 
 import { useEffect, useState } from 'react';
-import './App.css'
+// components
 import FormTodo from './assets/components/formtodo/FormTodo'
 import ListTodos from './assets/components/listtodos/ListTodos';
+// styles
+import './App.css';
 
 function App() {
-
   const [listTodo, setListTodo] = useState([]);
   const [nameTodo, setNameTodo] = useState();
-  const [completedTodo, setCompletedTodo] = useState(null);
 
   // cria a lista de todos
   const createdTodoList = () => {
@@ -19,35 +17,20 @@ function App() {
     const newItem = {
       id: generetedId(),
       name: nameTodo,
-      completed: completedTodo,
+      status: false,
       creation: generetedCreationDate(),
     };
 
     const updatedTodos = [...listTodo, newItem];
-
     setListTodo(updatedTodos);
+
     localStorage.setItem('listtodo', JSON.stringify(listTodo));
-    setNameTodo('');
+    // setNameTodo('');
   };
 
+  // gera o id da tarefa
   const generetedId = () => {
     return Math.floor(Math.random() * 10000);
-  };
-
-  // passa na local storage e atualiza a lista
-  useEffect(() => {
-    const getLocalStorage = JSON.parse(localStorage.getItem('listtodo'));
-    if (getLocalStorage) {
-      setListTodo(getLocalStorage);
-    }
-  }, []);
-
-  // remove todo
-  const removeTodo = (id) => {
-    const updateList = listTodo.filter((item) => item.id !== id);
-
-    setListTodo(updateList);
-    localStorage.setItem('listtodo', JSON.stringify(updateList));
   };
 
   // gera data de criação
@@ -59,6 +42,35 @@ function App() {
     const currentDate = `${day}/${month}/${year}`;
     return currentDate
   };
+
+  // passa na local storage e atualiza a lista
+  useEffect(() => {
+    const getLocalStorage = JSON.parse(localStorage.getItem('listtodo'));
+    if (getLocalStorage) {
+      setListTodo(getLocalStorage);
+    }
+  }, []);
+
+  // completa a tarefa
+  const toggleCompletedTodo = (id) => {
+    const updateList = listTodo.map((item) =>
+      item.id === id ? { ...item, status: !item.status } : item
+    );
+    setListTodo(updateList);
+    localStorage.setItem('listtodo', JSON.stringify(updateList));
+  };
+
+  // remove a tarefa
+  const removeTodo = (id) => {
+    const updateList = listTodo.filter((item) => item.id !== id);
+    setListTodo(updateList);
+    localStorage.setItem('listtodo', JSON.stringify(updateList));
+    console.log('TESTE REMOVE!')
+  };
+
+  // const resetData = () => {
+  //   localStorage.removeItem('listtodo');
+  // };
 
   // localStorage.removeItem('listtodo');
   return (
@@ -76,6 +88,8 @@ function App() {
             listTodo={listTodo}
             setNameTodo={setNameTodo}
             removeTodo={removeTodo}
+            toggleCompletedTodo={toggleCompletedTodo}
+          // resetData={resetData}
           />
           :
           <p>Você ainda não possui tarefas...</p>
