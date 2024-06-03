@@ -5,19 +5,22 @@ import Todo from '../todo/Todo';
 // styles
 import styles from './ListTodos.module.css'
 
-const ListTodos = ({ listTodo, removeTodo, toggleCompletedTodo}) => {
+const ListTodos = ({ listTodo, removeTodo, toggleCompletedTodo, resetData }) => {
 
     return (
         <div className={styles.list_todos}>
             <div className={styles.controller}>
                 <button
                     className={styles.btn}
-                    onClick={() => resetData}
+                    onClick={resetData}
                 >
                     Reset
                 </button>
-
-                <button className={styles.btn}>Order</button>
+                <button
+                    className={styles.btn}
+                >
+                    Order
+                </button>
             </div>
             <ul>
                 {listTodo.map((item) => (
@@ -27,9 +30,10 @@ const ListTodos = ({ listTodo, removeTodo, toggleCompletedTodo}) => {
                             removeTodo={removeTodo}
                             todo={item}
                             toggleCompletedTodo={toggleCompletedTodo}
+                            resetData={resetData}
                         />}
-                    </li>))
-                }
+                    </li>
+                ))}
             </ul>
         </div >
     );

@@ -68,9 +68,10 @@ function App() {
     console.log('TESTE REMOVE!')
   };
 
-  // const resetData = () => {
-  //   localStorage.removeItem('listtodo');
-  // };
+  const resetData = () => {
+    localStorage.removeItem('listtodo');
+    console.log('RESETDATA!')
+  };
 
   // localStorage.removeItem('listtodo');
   return (
@@ -89,7 +90,7 @@ function App() {
             setNameTodo={setNameTodo}
             removeTodo={removeTodo}
             toggleCompletedTodo={toggleCompletedTodo}
-          // resetData={resetData}
+            resetData={resetData}
           />
           :
           <p>Você ainda não possui tarefas...</p>
