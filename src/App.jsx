@@ -69,7 +69,9 @@ function App() {
   };
 
   const resetData = () => {
-    localStorage.removeItem('listtodo');
+    const updateList = localStorage.removeItem('listtodo');
+    setListTodo(updateList);
+    setListTodo([])
     console.log('RESETDATA!')
   };
 
@@ -84,7 +86,7 @@ function App() {
           setNameTodo={setNameTodo}
         />
 
-        {listTodo.length !== 0 ?
+        {listTodo.length !== 0 || undefined ?
           <ListTodos
             listTodo={listTodo}
             setNameTodo={setNameTodo}

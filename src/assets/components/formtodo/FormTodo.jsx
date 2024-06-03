@@ -13,11 +13,11 @@ const FormTodo = ({ createdTodoList, setNameTodo }) => {
             <div className={styles.container}>
                 <input
                     type="text"
-                    placeholder='informe o nome da tarefa...'
+                    placeholder='Informe o nome da tarefa...'
                     onChange={handleOnChange}
                 />
                 <button
-                    className={styles.created}
+                    className={styles.btn_created}
                     type='button'
                     onClick={createdTodoList}
                 >
