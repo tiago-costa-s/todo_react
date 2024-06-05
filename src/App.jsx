@@ -117,7 +117,7 @@ function App() {
             resetData={resetData}
           />
           :
-          <p>Você ainda não possui tarefas...</p>
+          null
         }
       </div>
     </div>
