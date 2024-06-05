@@ -1,6 +1,6 @@
 .app {
   margin: 5rem auto;
-  width: 600px;
+  max-width: 600px;
   height: 200px;
 }
 
@@ -11,8 +11,18 @@ h1 {
 }
 
 .container_app {
-  background-color: #39404A;
+  background-color: #39404a;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 5px 5px 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .app {
+    padding: 0.3rem;
+  }
+
+  .container_app {
+    padding: 1.5rem 1rem;
+  }
 }
