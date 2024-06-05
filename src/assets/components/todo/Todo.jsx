@@ -25,8 +25,8 @@ const Todo = ({ todo, name, removeTodo, toggleCompletedTodo }) => {
                     </button>
                 </div>
             </div>
-            <div className={styles.date}>
-                <p>{todo.creation}</p>
+            <div className={styles.date_creation}>
+                <p className={styles.date}>{todo.creation}</p>
             </div>
         </div>
     );

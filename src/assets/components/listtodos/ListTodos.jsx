@@ -14,12 +14,12 @@ const ListTodos = ({ listTodo, removeTodo, toggleCompletedTodo, resetData }) => 
                     className={styles.btn}
                     onClick={resetData}
                 >
-                    Reset
+                    Resetar
                 </button>
                 <button
                     className={styles.btn}
                 >
-                    Order
+                    Ordernar
                 </button>
             </div>
             <ul>
