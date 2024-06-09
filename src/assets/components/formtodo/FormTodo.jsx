@@ -8,6 +8,12 @@ const FormTodo = ({ createdTodoList, setNameTodo }) => {
         setNameTodo(e.target.value);
     };
 
+    const handleKeyDowm = (e) => {
+        if (e.key == 'Enter') {
+            createdTodoList();
+        }
+    };
+
     return (
         <div className={styles.form_todo}>
             <div className={styles.container}>
@@ -15,10 +21,12 @@ const FormTodo = ({ createdTodoList, setNameTodo }) => {
                     type="text"
                     placeholder='Informe o nome da tarefa...'
                     onChange={handleOnChange}
+                    onKeyDown={handleKeyDowm}
                 />
                 <button
                     className={styles.btn_created}
                     type='button'
+                    onc
                     onClick={createdTodoList}
                 >
                     Criar
