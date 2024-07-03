@@ -1,5 +1,3 @@
-// icons
-import { BsBootstrapReboot } from "react-icons/bs";
 // componets
 import Todo from '../todo/Todo';
 // styles

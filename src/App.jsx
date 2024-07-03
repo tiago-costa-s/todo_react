@@ -25,32 +25,13 @@ function App() {
     setListTodo(updatedTodos);
 
     localStorage.setItem('listtodo', JSON.stringify(listTodo));
-    // setNameTodo('');
+    setNameTodo('');
   };
 
   // gera o id da tarefa
   const generetedId = () => {
     return Math.floor(Math.random() * 10000);
   };
-
-  // gera data de criação
-  // const teste = {
-  //   date: new Date(),
-  //   consultDate: () => {
-  //     const day = String(date.getDay()).padStart(2, '0');
-  //     const month = String(date.getMonth() + 1).padStart(2, '0');
-  //     const year = String(date.getFullYear());
-  //     const currentDate = `${day}/${month}/${year} - ${horus}`;
-  //     return currentDate
-  //   },
-
-  //   consultHorus: () => {
-  //     const horus = String(date.getHours());
-  //     const minutes = String(date.getMinutes());
-  //     const currentDate = `${horus}:${minutes} `;
-  //     return currentDate
-  //   }
-  // }
 
   const generetedCreationDate = () => {
     const date = new Date();

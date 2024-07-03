@@ -22,7 +22,7 @@
 }
 
 @media (max-width: 1000px) {
-  .App {
+  .container {
     background-color: red;
   }
 }
