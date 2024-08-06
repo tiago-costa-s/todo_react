@@ -19,6 +19,7 @@ h1 {
 
 @media (width < 600px) {
   .app {
+    margin: 1rem auto;
     padding: 0.7rem;
   }
 

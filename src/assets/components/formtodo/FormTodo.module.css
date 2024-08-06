@@ -14,7 +14,7 @@
 
 .container {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.2rem;
 }
 .btn_created {
   padding: 16px;
@@ -23,6 +23,6 @@
 
 @media (max-width: 1000px) {
   .container {
-    background-color: red;
+    /* background-color: red; */
   }
 }

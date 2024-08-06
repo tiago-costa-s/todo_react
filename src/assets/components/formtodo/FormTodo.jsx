@@ -1,5 +1,3 @@
-// styles
-import { useState } from 'react';
 import styles from './FormTodo.module.css'
 
 const FormTodo = ({ createdTodoList, setNameTodo }) => {
@@ -25,8 +23,7 @@ const FormTodo = ({ createdTodoList, setNameTodo }) => {
                 />
                 <button
                     className={styles.btn_created}
-                    type='button'
-                    onc
+                    type='button'                    
                     onClick={createdTodoList}
                 >
                     Criar
