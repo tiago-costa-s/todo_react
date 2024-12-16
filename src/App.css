@@ -17,9 +17,10 @@ h1 {
   box-shadow: 5px 5px 20px;
 }
 
-@media screen and (max-width: 900px) {
+@media (width < 600px) {
   .app {
-    padding: 0.3rem;
+    margin: 1rem auto;
+    padding: 0.7rem;
   }
 
   .container_app {

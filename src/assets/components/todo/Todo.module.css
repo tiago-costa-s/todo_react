@@ -65,3 +65,12 @@
   font-weight: 400;
 }
 
+@media (width < 1204px) {
+  .icons_todo {
+    font-size: 1.7rem;
+  }
+  .date {
+    font-size: 0.8rem;
+  }
+  
+}
